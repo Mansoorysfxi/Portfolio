@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Dark Theme</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="box">
+    <!-- Intro box for photo and introduction -->
+    <div class="intro-box">
+      <img src="Pictures\pp.jpg" alt="Your Photo">
+      <div class="intro-text">
+        <h2>Your Name</h2>
+        <h3>Technical Artist</h3>
+        <p>I am a technical artist with expertise in 3D modeling, procedural generation, and real-time engines like Unreal Engine, Houdini, and more.</p>
+      </div>
+      <!-- Added 8 pictures in two rows -->
+      <div class="pictures-grid">
+        <img src="Pictures\Logos\5968543.png" alt="Image 1">
+        <img src="Pictures\Logos\adobe-substance-3d-designer-icon.png" alt="Image 2">
+        <img src="Pictures/Logos/app-icon.png" alt="Image 3">
+        <img src="Pictures\Logos\blender-transparent-background-icon-free-png.webp" alt="Image 4">
+        <img src="Pictures\Logos\Houdini-Logo-1-300x300.png" alt="Image 5">
+        <img src="Pictures\Logos\unreal-engine-icon1721420032.logowik.com.webp" alt="Image 6">
+        <img src="Pictures\Logos\911_c_logo.jpg" alt="Image 7">
+        <img src="Pictures\Logos\Python-Emblem.png" alt="Image 8">
+      </div>
+    </div>
+
+    <div class="projects-box">
+      <div class="projects-info">
+        <div class="column">
+          <h2>Projects Completed : 100</h2>
+        </div>
+        <div class="column">
+          <h2>Satisfied Clients : 10</h2>
+        </div>
+      </div>
+      <div class="contact-button">
+        <a href="mailto:mansoorak.1010@gmail.com">Contact Me</a>
+      </div>
+    </div>
+    
+    
+    
+
+    <!-- New buttons to load YouTube video boxes -->
+    <div class="button-container">
+      
+      <button class="load-videos" onclick="loadVideos('blender')">Blender</button>
+      <button class="load-videos" onclick="loadVideos('houdini')">Houdini</button>
+      <button class="load-videos" onclick="loadVideos('unreal')">Unreal Engine</button>
+    </div>
+
+    <!-- New section for YouTube videos inside the description box -->
+    <div class="video-section" id="video-section"></div>
+
+    <footer>
+      <p>&copy; 2024 My Dark Themed Website. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+
+    loadVideos('blender')
+
+    function loadVideos(engine) {
+      const videoSection = document.getElementById('video-section');
+      videoSection.innerHTML = ''; // Clear previous videos
+
+      // Reset active class on buttons
+      const buttons = document.querySelectorAll('.load-videos');
+      buttons.forEach(button => button.classList.remove('active'));
+
+      let bcolor = '#2b1a00'
+      let hcolor = '#200200'
+      let ucolor = '#001421'
+
+      let videos;
+      if (engine === 'blender') {
+        videos = [
+          { title: "Blender Video 1", subtitle: "Subtitle 1", description: "Description for Blender video 1.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh descriptionThis is teh description", url: "https://www.youtube.com/embed/uA8sEE-cDMY", color: bcolor },
+          { title: "Blender Video 2", subtitle: "Subtitle 2", description: "Description for Blender video 2.", url: "https://www.youtube.com/embed/video-id2", color: bcolor },
+          { title: "Blender Video 2", subtitle: "Subtitle 2", description: "Description for Blender video 2.", url: "https://www.youtube.com/embed/video-id2", color: bcolor }
+        ];
+        document.querySelector('.load-videos:nth-child(1)').classList.add('active'); // Highlight Blender button
+      } else if (engine === 'houdini') {
+        videos = [
+          { title: "Houdini Video 1", subtitle: "Subtitle 1", description: "Description for Houdini video 1.", url: "https://www.youtube.com/embed/video-id3", color: hcolor }, // Dark orange
+          { title: "Houdini Video 2", subtitle: "Subtitle 2", description: "Description for Houdini video 2.", url: "https://www.youtube.com/embed/video-id4", color: hcolor }
+        ];
+        document.querySelector('.load-videos:nth-child(2)').classList.add('active'); // Highlight Houdini button
+      } else if (engine === 'unreal') {
+        videos = [
+          { title: "Unreal Video 1", subtitle: "Subtitle 1", description: "Description for Unreal video 1.", url: "https://www.youtube.com/embed/video-id5", color: ucolor },
+          { title: "Unreal Video 2", subtitle: "Subtitle 2", description: "Description for Unreal video 2.", url: "https://www.youtube.com/embed/video-id6", color: ucolor }
+        ];
+        document.querySelector('.load-videos:nth-child(3)').classList.add('active'); // Highlight Unreal Engine button
+      }
+
+      videos.forEach(video => {
+        const videoBox = document.createElement('div');
+        videoBox.className = 'video-box';
+        videoBox.style.backgroundColor = video.color;
+
+        videoBox.innerHTML = `
+          <iframe src="${video.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-text">
+            <h3>${video.title}</h3>
+            <h4>${video.subtitle}</h4>
+            <p>${video.description}</p>
+          </div>
+        `;
+        videoSection.appendChild(videoBox);
+      });
+    }
+
+  </script>
+</body>
+</html>
