@@ -8,10 +8,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <div id="loading-screen">
+    <div class="spinner"></div>
+  </div>
+  
+  <!-- Rest of your website content -->
+  
+
   <div class="box">
     <!-- Intro box for photo and introduction -->
     <div class="intro-box">
-      <img src="Pictures\pp.jpg" alt="Your Photo">
+      <img id="profile-picture" src="pp.jpg" alt="Profile Picture" class="profile-pic">
       <div class="intro-text">
         <h2>Your Name</h2>
         <h3>Technical Artist</h3>
@@ -65,6 +73,30 @@
 
   <script>
 
+     // Array of image URLs to switch between
+  const images = [
+    'giphy.gif',
+    'pp.jpg',
+    'profile_pic.png'
+  ];
+
+  let currentIndex = 0;
+  const profilePic = document.getElementById('profile-picture');
+
+  // Function to change the profile picture
+  function changeProfilePicture() {
+    currentIndex = (currentIndex + 1) % images.length;  // Loop through the images
+    profilePic.src = images[currentIndex];
+  }
+
+  // Change the profile picture every 3 seconds (3000 ms)
+  setInterval(changeProfilePicture, 3000);
+
+    window.addEventListener("load", function() {
+      // Hide the loading screen when the page is fully loaded
+    document.getElementById("loading-screen").style.display = "none";
+    });
+
     loadVideos('blender')
 
     function loadVideos(engine) {
@@ -78,7 +110,7 @@
       let bcolor = '#2b1a00'
       let hcolor = '#200200'
       let ucolor = '#001421'
-
+    
       let videos;
       if (engine === 'blender') {
         videos = [
