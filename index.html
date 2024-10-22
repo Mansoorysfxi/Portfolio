@@ -50,6 +50,9 @@
       <div class="contact-button">
         <a href="mailto:mansoorak.1010@gmail.com">Contact Me</a>
       </div>
+      <div class="contact-button">
+        <a href="https://drive.usercontent.google.com/download?id=1d2uSTsTPgoqLFSoJ_ZLvUOsh5vJIPg87&export=download&authuser=0&confirm=t&uuid=926393b8-83f3-4d2c-95be-0e1cebf90bc3&at=AN_67v3dDaWyuiM1pcrn8eSRsbbZ:1729094365912">Resume</a>
+      </div>
     </div>
     
     
@@ -61,6 +64,8 @@
       <button class="load-videos" onclick="loadVideos('blender')">Blender</button>
       <button class="load-videos" onclick="loadVideos('houdini')">Houdini</button>
       <button class="load-videos" onclick="loadVideos('unreal')">Unreal Engine</button>
+      <button class="load-videos" onclick="loadVideos('misc')">MISC</button>
+      
     </div>
 
     <!-- New section for YouTube videos inside the description box -->
@@ -110,27 +115,62 @@
       let bcolor = '#2b1a00'
       let hcolor = '#200200'
       let ucolor = '#001421'
-    
-      let videos;
+      
+      const b_desc_arr = [
+        `Description for Blender video 1.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.
+        This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh descriptionThis is teh description`,
+        `Nigga what the actual fucnk is this`,
+      ];
+
+      const h_desc_arr = [
+        `Description for Houdini video 1.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.
+        This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh descriptionThis is teh description`,
+        `Nigga what the actual fucnk is this`,
+      ];
+      
+      const u_desc_arr = [
+        `Description for Unreal Engine video 1.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.
+        This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh descriptionThis is teh description`,
+        `Nigga what the actual fucnk is this`,
+      ];
+
+      const m_desc_arr = [
+        `Description for Misc video 1.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.
+        This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh descriptionThis is teh description`,
+        `Nigga what the actual fucnk is this`,
+
+      ];
+
+      
       if (engine === 'blender') {
         videos = [
-          { title: "Blender Video 1", subtitle: "Subtitle 1", description: "Description for Blender video 1.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh descriptionThis is teh description", url: "https://www.youtube.com/embed/uA8sEE-cDMY", color: bcolor },
-          { title: "Blender Video 2", subtitle: "Subtitle 2", description: "Description for Blender video 2.", url: "https://www.youtube.com/embed/video-id2", color: bcolor },
-          { title: "Blender Video 2", subtitle: "Subtitle 2", description: "Description for Blender video 2.", url: "https://www.youtube.com/embed/video-id2", color: bcolor }
+          { title: "Timex Wrist Watch", subtitle: "Subtitle 1", description: b_desc_arr[0], url: "https://www.youtube.com/embed/1QuyzuslyI0", color: bcolor },
+          { title: "Synthesizer", subtitle: "Subtitle 2", description: b_desc_arr[1], url: "https://www.youtube.com/embed/bTfT-k5Uu5U", color: bcolor },
+          { title: "Wig Glue Bottle", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/zaro1N6kUj4", color: bcolor },
+          { title: "MacroPad", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/PRYaQCzWc-U", color: bcolor },
+          { title: "Hoodies", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/NuEJG7l2cpk", color: bcolor },
+          { title: "Cyborg", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/CeaOsPNg5Xc", color: bcolor },
+          { title: "Sport Shirts Promo", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/28Ytqv3wAk4", color: bcolor },
         ];
         document.querySelector('.load-videos:nth-child(1)').classList.add('active'); // Highlight Blender button
       } else if (engine === 'houdini') {
         videos = [
-          { title: "Houdini Video 1", subtitle: "Subtitle 1", description: "Description for Houdini video 1.", url: "https://www.youtube.com/embed/video-id3", color: hcolor }, // Dark orange
-          { title: "Houdini Video 2", subtitle: "Subtitle 2", description: "Description for Houdini video 2.", url: "https://www.youtube.com/embed/video-id4", color: hcolor }
+          { title: "Houdini Video 1", subtitle: "Subtitle 1", description: h_desc_arr[0], url: "https://www.youtube.com/embed/video-id3", color: hcolor }, // Dark orange
+          { title: "Houdini Video 2", subtitle: "Subtitle 2", description: h_desc_arr[1], url: "https://www.youtube.com/embed/video-id4", color: hcolor }
         ];
         document.querySelector('.load-videos:nth-child(2)').classList.add('active'); // Highlight Houdini button
       } else if (engine === 'unreal') {
         videos = [
-          { title: "Unreal Video 1", subtitle: "Subtitle 1", description: "Description for Unreal video 1.", url: "https://www.youtube.com/embed/video-id5", color: ucolor },
-          { title: "Unreal Video 2", subtitle: "Subtitle 2", description: "Description for Unreal video 2.", url: "https://www.youtube.com/embed/video-id6", color: ucolor }
+          { title: "Unreal Video 1", subtitle: "Subtitle 1", description: u_desc_arr[0], url: "https://www.youtube.com/embed/video-id5", color: ucolor },
+          { title: "Unreal Video 2", subtitle: "Subtitle 2", description: u_desc_arr[1], url: "https://www.youtube.com/embed/video-id6", color: ucolor }
         ];
         document.querySelector('.load-videos:nth-child(3)').classList.add('active'); // Highlight Unreal Engine button
+      } else if (engine === 'misc') {
+        videos = [
+          { title: "MISC Video 1", subtitle: "Subtitle 1", description: m_desc_arr[0], url: "https://www.youtube.com/embed/video-id5", color: ucolor },
+          { title: "MISC Video 2", subtitle: "Subtitle 2", description: m_desc_arr[1], url: "https://www.youtube.com/embed/video-id6", color: ucolor }
+        ];
+        document.querySelector('.load-videos:nth-child(4)').classList.add('active'); // Highlight Unreal Engine button
       }
 
       videos.forEach(video => {
