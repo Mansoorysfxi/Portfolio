@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="favicon.png" type="Pictures\favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,8 +23,8 @@
       <img id="profile-picture" src="pp.jpg" alt="Profile Picture" class="profile-pic">
       <div class="intro-text">
         <h2>Mansoor Khan</h2>
-        <h3>Technical Artist</h3>
-        <p>I am a technical artist with expertise in 3D modeling, procedural generation, and real-time engines like Unreal Engine, Houdini, and more.</p>
+        <h3>Technical Artist | Problem Solving | R&D</h3>
+        <p>Technical Artist with four years of experience in both freelance and full-time roles. I have a knack for automation and specialize in creating geometry, materials, and textures using procedural techniques. Experienced in AR/VR projects, I am passionate about leveraging synthetic data and deep tech for innovative problem-solving in creative projects.</p>
       </div>
       <!-- Added 8 pictures in two rows -->
       <div class="pictures-grid">
@@ -44,7 +45,7 @@
           <h2>Projects Completed : 100</h2>
         </div>
         <div class="column">
-          <h2>Satisfied Clients : 10</h2>
+          <h2>Years of Experience : 4</h2>
         </div>
       </div>
       <div class="contact-button">
@@ -80,9 +81,7 @@
 
      // Array of image URLs to switch between
   const images = [
-    'giphy.gif',
     'pp.jpg',
-    'profile_pic.png'
   ];
 
   let currentIndex = 0;
@@ -117,9 +116,20 @@
       let ucolor = '#001421'
       
       const b_desc_arr = [
-        `Description for Blender video 1.This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.
-        This is teh description.This is teh description.This is teh description.This is teh description.This is teh description.This is teh descriptionThis is teh description`,
-        `Nigga what the actual fucnk is this`,
+        `An ultra-realistic render of a Timex watch brought to life with precise lighting and animation techniques. Enhanced through post-processing and 
+        refined with video editing in Premiere Pro, this video captures every detail and movement to achieve a lifelike result.`,
+        `A visually engaging render of a synthesizer, showcasing realistic lighting and textures. The video experiments with dynamic camera and object 
+        movements to highlight intricate details and create a lifelike viewing experience.`,
+        `A product animation of a wig glue bottle created for an eCommerce client project. This video pairs smooth motion with precise sound sync, 
+        capturing attention with polished video editing for a professional and engaging presentation.`,
+        `A detailed animation of a macropad, featuring realistic simulations, intricate texturing, and carefully crafted lighting to highlight 
+        every component and create an immersive, lifelike visual experience.`,
+        `A sleek eCommerce product animation showcasing hoodies with smooth transitions and polished video editing, designed to highlight fabric 
+        textures and details for an engaging online shopping experience.`,
+        `A captivating animation featuring a menacing cyborg in a dark, immersive environment. This short film explores the cyborg's sinister presence, 
+        enhanced by dynamic movements and atmospheric details that emphasize its evil nature.`,
+        `A promotional animation showcasing sports shirts, created for a client project. This video utilizes dynamic lighting and smooth animation to highlight 
+        the features and benefits of the shirts, engaging viewers and promoting the product effectively.`,
       ];
 
       const h_desc_arr = [
@@ -144,13 +154,13 @@
       
       if (engine === 'blender') {
         videos = [
-          { title: "Timex Wrist Watch", subtitle: "Subtitle 1", description: b_desc_arr[0], url: "https://www.youtube.com/embed/1QuyzuslyI0", color: bcolor },
-          { title: "Synthesizer", subtitle: "Subtitle 2", description: b_desc_arr[1], url: "https://www.youtube.com/embed/bTfT-k5Uu5U", color: bcolor },
-          { title: "Wig Glue Bottle", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/zaro1N6kUj4", color: bcolor },
-          { title: "MacroPad", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/PRYaQCzWc-U", color: bcolor },
-          { title: "Hoodies", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/NuEJG7l2cpk", color: bcolor },
-          { title: "Cyborg", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/CeaOsPNg5Xc", color: bcolor },
-          { title: "Sport Shirts Promo", subtitle: "Subtitle 2", description: b_desc_arr[2], url: "https://www.youtube.com/embed/28Ytqv3wAk4", color: bcolor },
+          { title: "Timeless Elegance: A Timex Watch Showcase", subtitle: "Subtitle Explore the intricate craftsmanship and design details of this iconic timepiece", description: b_desc_arr[0], url: "https://www.youtube.com/embed/1QuyzuslyI0", color: bcolor },
+          { title: "Sonic Visions: A Synthesizer Experience", subtitle: "Delve into dynamic movements and realistic lighting that bring sound to life.", description: b_desc_arr[1], url: "https://www.youtube.com/embed/bTfT-k5Uu5U", color: bcolor },
+          { title: "Stick With It: Wig Glue in Action", subtitle: "A professional product animation designed for eCommerce success.", description: b_desc_arr[2], url: "https://www.youtube.com/embed/zaro1N6kUj4", color: bcolor },
+          { title: "Precision at Your Fingertips: The Macropad Animation", subtitle: "Experience lifelike simulations and textures in a captivating display.", description: b_desc_arr[3], url: "https://www.youtube.com/embed/PRYaQCzWc-U", color: bcolor },
+          { title: "Stylish Comfort: Hoodies in Motion", subtitle: "Engaging eCommerce product animation that highlights fabric and features.", description: b_desc_arr[4], url: "https://www.youtube.com/embed/NuEJG7l2cpk", color: bcolor },
+          { title: "Dark Descent: The Rise of the Evil Cyborg", subtitle: "A thrilling animation that immerses you in a world of danger and intrigue.", description: b_desc_arr[5], url: "https://www.youtube.com/embed/CeaOsPNg5Xc", color: bcolor },
+          { title: "Gear Up: Sports Shirts Animation", subtitle: "Promoting performance and style through dynamic visuals and lighting.", description: b_desc_arr[6], url: "https://www.youtube.com/embed/28Ytqv3wAk4", color: bcolor },
         ];
         document.querySelector('.load-videos:nth-child(1)').classList.add('active'); // Highlight Blender button
       } else if (engine === 'houdini') {
