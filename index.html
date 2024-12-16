@@ -139,6 +139,13 @@
       const u_desc_arr = [
         `Explore an innovative VR steering interaction built in Unreal Engine for Oculus Quest. This video demonstrates intuitive controls, immersive mechanics, 
         and seamless VR experiences designed to redefine virtual reality interactions.`,
+        `This system demonstrates a highly optimized method for assigning unique RGB colors to objects spawned via PCG in Unreal Engine. By leveraging static mesh 
+        and post-process materials, the system ensures consistent, noise-free colors unaffected by shadows or lighting. Ideal for sensor-based applications and other 
+        technical purposes, this approach is scalable for millions of objects and maintains efficiency by rendering colors visible only at runtime. Watch the video to
+        see this precise and innovative technique in action.`,
+        `This Unreal Engine editor tool streamlines environment art by dynamically adjusting splines to terrain or static meshes. Perfect for roads, paths, rivers, and 
+        similar applications, the tool uses construction scripts, custom events, collisions, and line traces for precise adaptation. An adjustable offset variable allows 
+        fine-tuned alignment to any surface, making it a versatile and powerful solution for efficient level design.`,
       ];
 
       const m_desc_arr = [
@@ -167,7 +174,8 @@
       } else if (engine === 'unreal') {
         videos = [
           { title: "Immersive VR Steering in Unreal Engine", subtitle: "A Seamless Oculus Quest Experience with Interactive Controls", description: u_desc_arr[0], url: "https://www.youtube.com/embed/-VjJ3m8aCKo", color: ucolor },
-          { title: "Unreal Video 2", subtitle: "Subtitle 2", description: u_desc_arr[1], url: "https://www.youtube.com/embed/video-id6", color: ucolor }
+          { title: "Unique RGB Color Assignment for PCG in Unreal Engine", subtitle: "Scalable and Accurate Color Mapping for Technical Applications", description: u_desc_arr[1], url: "https://www.youtube.com/embed/UU_uxAWQcow", color: ucolor },
+          { title: "Dynamic Spline Tool for Unreal Engine", subtitle: "Automatic Terrain-Adaptive Splines for Roads, Rivers, and Paths", description: u_desc_arr[2], url: "https://www.youtube.com/embed/IrfV5KuPmPU", color: ucolor }
         ];
         document.querySelector('.load-videos:nth-child(3)').classList.add('active'); // Highlight Unreal Engine button
       } else if (engine === 'misc') {
