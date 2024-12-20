@@ -146,6 +146,12 @@
         `This Unreal Engine editor tool streamlines environment art by dynamically adjusting splines to terrain or static meshes. Perfect for roads, paths, rivers, and 
         similar applications, the tool uses construction scripts, custom events, collisions, and line traces for precise adaptation. An adjustable offset variable allows 
         fine-tuned alignment to any surface, making it a versatile and powerful solution for efficient level design.`,
+        `This optimized material system brings unique colors and textures to individual instanced static meshes of leaves, adding natural variation for increased realism. 
+        Designed with efficiency in mind, it ensures minimal performance impact while achieving vibrant, non-uniform foliage. The video demonstrates a parameter that 
+        visualizes the randomization process, showcasing how this method enhances both aesthetics and performance in Unreal Engine.`,
+        `This PCG graph tool enables designers to create shelves procedurally in Unreal Engine with ease. Featuring multiple adjustable parameters, it offers endless 
+        variations to suit any design need. The system integrates seamlessly with splines for precise control and uses blueprints to communicate with the PCG graph, 
+        enabling automated randomization and parameter assignment. Watch how this tool empowers efficient and flexible environment creation.`,
       ];
 
       const m_desc_arr = [
@@ -175,7 +181,9 @@
         videos = [
           { title: "Immersive VR Steering in Unreal Engine", subtitle: "A Seamless Oculus Quest Experience with Interactive Controls", description: u_desc_arr[0], url: "https://www.youtube.com/embed/-VjJ3m8aCKo", color: ucolor },
           { title: "Unique RGB Color Assignment for PCG in Unreal Engine", subtitle: "Scalable and Accurate Color Mapping for Technical Applications", description: u_desc_arr[1], url: "https://www.youtube.com/embed/UU_uxAWQcow", color: ucolor },
-          { title: "Dynamic Spline Tool for Unreal Engine", subtitle: "Automatic Terrain-Adaptive Splines for Roads, Rivers, and Paths", description: u_desc_arr[2], url: "https://www.youtube.com/embed/IrfV5KuPmPU", color: ucolor }
+          { title: "Dynamic Spline Tool for Unreal Engine", subtitle: "Automatic Terrain-Adaptive Splines for Roads, Rivers, and Paths", description: u_desc_arr[2], url: "https://www.youtube.com/embed/IrfV5KuPmPU", color: ucolor },
+          { title: "Optimized Material for Leaf Variation in Unreal Engine", subtitle: "Efficient Randomization for Realistic Foliage", description: u_desc_arr[3], url: "https://www.youtube.com/embed/24h9wwi_omI", color: ucolor },
+          { title: "Procedural Shelf Generation with PCG in Unreal Engine", subtitle: "Customizable Shelf Variations Controlled by Splines", description: u_desc_arr[3], url: "https://www.youtube.com/embed/HhkGtdPYlno", color: ucolor }
         ];
         document.querySelector('.load-videos:nth-child(3)').classList.add('active'); // Highlight Unreal Engine button
       } else if (engine === 'misc') {
