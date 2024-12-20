@@ -52,7 +52,7 @@
         <a href="mailto:mansoorak.1010@gmail.com">Contact Me</a>
       </div>
       <div class="contact-button">
-        <a href="https://drive.usercontent.google.com/download?id=1d2uSTsTPgoqLFSoJ_ZLvUOsh5vJIPg87&export=download&authuser=0&confirm=t&uuid=926393b8-83f3-4d2c-95be-0e1cebf90bc3&at=AN_67v3dDaWyuiM1pcrn8eSRsbbZ:1729094365912">Resume</a>
+        <a href="https://drive.usercontent.google.com/download?id=1VtMZK6fdhLtkN8-YiJHkMj6Chj0skYB6&export=download&authuser=0&confirm=t&uuid=e5645d13-15d6-4519-93d1-b2a17af4cd2a&at=APvzH3pCko960CUbfaMJ6MCXh7fL:1734691369187">Resume</a>
       </div>
     </div>
     
@@ -101,7 +101,7 @@
     document.getElementById("loading-screen").style.display = "none";
     });
 
-    loadVideos('blender')
+    loadVideos('unreal')
 
     function loadVideos(engine) {
       const videoSection = document.getElementById('video-section');
@@ -133,7 +133,9 @@
       ];
 
       const h_desc_arr = [
-        `Coming Soon`,
+        `This Houdini algorithm procedurally adds realistic dents and defects to car body 3D models. With parameters to control dent size, defect count, and randomization, 
+        designers can create customized variations effortlessly. The algorithm also allows separation of dented and non-dented areas while maintaining the original polygon 
+        count, ensuring optimal performance. Perfect for generating realistic damage without compromising model integrity.`,
       ];
       
       const u_desc_arr = [
@@ -152,10 +154,19 @@
         `This PCG graph tool enables designers to create shelves procedurally in Unreal Engine with ease. Featuring multiple adjustable parameters, it offers endless 
         variations to suit any design need. The system integrates seamlessly with splines for precise control and uses blueprints to communicate with the PCG graph, 
         enabling automated randomization and parameter assignment. Watch how this tool empowers efficient and flexible environment creation.`,
+        `This Houdini algorithm procedurally adds realistic dents and defects to car body 3D models. With parameters to control dent size, defect count, and randomization, 
+        designers can create customized variations effortlessly. The algorithm also allows separation of dented and non-dented areas while maintaining the original polygon 
+        count, ensuring optimal performance. Perfect for generating realistic damage without compromising model integrity.`,
       ];
 
       const m_desc_arr = [
-        `Coming Soon`,
+        `I was a part of the team that worked on this project, my tasks included working on the procedural algorithm for adding defects to the mesh of the car and setting up the environment
+        for generated sythetic data. I worked on the automatic assignment of colors to the meshes for different segmentation purposes`,
+        `I was a part of the team that worked on this project, I worked on the logic for blueprints that randomizes the positoin and rotation of the boxes so that we could generate unique images.
+        I also worked on the usb packets using physics sytem of the unreal engine to run simulations and generate realistic unique images.`,
+        `I was a part of the team that worked on this project, my tasks included working on the plant algorithms to generate variations of the same plant and creating their materials in Unreal Engine,
+        I had to make sure to add a layer of randomization in the meshes, their placement and the different materials applies to them. I also worked on the PCG modules to generate the different orchards
+        and environments for the plants.`,
 
       ];
 
@@ -173,8 +184,7 @@
         document.querySelector('.load-videos:nth-child(1)').classList.add('active'); // Highlight Blender button
       } else if (engine === 'houdini') {
         videos = [
-          { title: "Houdini Video 1", subtitle: "Subtitle 1", description: h_desc_arr[0], url: "https://www.youtube.com/embed/video-id3", color: hcolor }, // Dark orange
-          { title: "Houdini Video 2", subtitle: "Subtitle 2", description: h_desc_arr[1], url: "https://www.youtube.com/embed/video-id4", color: hcolor }
+        { title: "Procedural Dent and Defect Generator in Houdini", subtitle: "Optimized Algorithm for Customizable Car Body Imperfections", description: u_desc_arr[0], url: "https://www.youtube.com/embed/BIE_B7IYIAg", color: ucolor }
         ];
         document.querySelector('.load-videos:nth-child(2)').classList.add('active'); // Highlight Houdini button
       } else if (engine === 'unreal') {
@@ -183,13 +193,15 @@
           { title: "Unique RGB Color Assignment for PCG in Unreal Engine", subtitle: "Scalable and Accurate Color Mapping for Technical Applications", description: u_desc_arr[1], url: "https://www.youtube.com/embed/UU_uxAWQcow", color: ucolor },
           { title: "Dynamic Spline Tool for Unreal Engine", subtitle: "Automatic Terrain-Adaptive Splines for Roads, Rivers, and Paths", description: u_desc_arr[2], url: "https://www.youtube.com/embed/IrfV5KuPmPU", color: ucolor },
           { title: "Optimized Material for Leaf Variation in Unreal Engine", subtitle: "Efficient Randomization for Realistic Foliage", description: u_desc_arr[3], url: "https://www.youtube.com/embed/24h9wwi_omI", color: ucolor },
-          { title: "Procedural Shelf Generation with PCG in Unreal Engine", subtitle: "Customizable Shelf Variations Controlled by Splines", description: u_desc_arr[3], url: "https://www.youtube.com/embed/HhkGtdPYlno", color: ucolor }
+          { title: "Procedural Shelf Generation with PCG in Unreal Engine", subtitle: "Customizable Shelf Variations Controlled by Splines", description: u_desc_arr[3], url: "https://www.youtube.com/embed/HhkGtdPYlno", color: ucolor },
+          { title: "Procedural Dent and Defect Generator in Houdini", subtitle: "Optimized Algorithm for Customizable Car Body Imperfections", description: u_desc_arr[3], url: "https://www.youtube.com/embed/BIE_B7IYIAg", color: ucolor }
         ];
         document.querySelector('.load-videos:nth-child(3)').classList.add('active'); // Highlight Unreal Engine button
       } else if (engine === 'misc') {
         videos = [
-          { title: "MISC Video 1", subtitle: "Subtitle 1", description: m_desc_arr[0], url: "https://www.youtube.com/embed/video-id5", color: ucolor },
-          { title: "MISC Video 2", subtitle: "Subtitle 2", description: m_desc_arr[1], url: "https://www.youtube.com/embed/video-id6", color: ucolor }
+          { title: "Car defect/dent detection in Unreal Engine", subtitle: "Synthetic Data in unreal engine with advanced anotations", description: m_desc_arr[0], url: "https://www.youtube.com/embed/Tk_Ryqdv8sU", color: ucolor },
+          { title: "Logistics Automation", subtitle: "Synthetic Data in unreal engine with advanced anotations", description: m_desc_arr[1], url: "https://www.youtube.com/embed/lpy_kamKVAY", color: ucolor },
+          { title: "Agritculture Data, Advanced object detection", subtitle: "Synthetic Data in unreal engine with advanced anotations", description: m_desc_arr[1], url: "https://www.youtube.com/embed/AVnpIbbrXg4", color: ucolor }
         ];
         document.querySelector('.load-videos:nth-child(4)').classList.add('active'); // Highlight Unreal Engine button
       }
