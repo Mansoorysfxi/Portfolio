@@ -133,12 +133,39 @@ html, body {
   transition: width 0.3s, height 0.3s; /* Smooth size change */
 }
 
+.button-container::before {
+  content: '* Click a button to see relevant projects';
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #e64a19;
+}
+
+
 /* Button styles */
 .button-container {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center; /* Center buttons */
+  text-align: center;
+  margin: 20px 0;
 }
+
+.button-container button {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #555;
+}
+
 
 .projects-box {
   display: flex;
