@@ -124,6 +124,9 @@
         `This Houdini algorithm procedurally adds realistic dents and defects to car body 3D models. With parameters to control dent size, defect count, and randomization, 
         designers can create customized variations effortlessly. The algorithm also allows separation of dented and non-dented areas while maintaining the original polygon 
         count, ensuring optimal performance. Perfect for generating realistic damage without compromising model integrity.`,
+        `This Houdini algorithm procedurally generates a realistic plastic wrapping effect for any 3D mesh. By blending procedural nodes with VEX code, the system creates
+        dynamic and customizable wraps, adding an extra layer of realism to models. Ideal for packaging simulations or enhancing product visualizations, the algorithm ensures 
+        versatility across various shapes and forms.`,
       ];
       
       const u_desc_arr = [
@@ -172,7 +175,9 @@
         document.querySelector('.load-videos:nth-child(1)').classList.add('active'); // Highlight Blender button
       } else if (engine === 'houdini') {
         videos = [
-          { title: "Procedural Dent and Defect Generator in Houdini", subtitle: "Optimized Algorithm for Customizable Car Body Imperfections", description: h_desc_arr[0], url: "https://www.youtube.com/embed/BIE_B7IYIAg", color: ucolor }
+          { title: "Procedural Dent and Defect Generator in Houdini", subtitle: "Optimized Algorithm for Customizable Car Body Imperfections", description: h_desc_arr[0], url: "https://www.youtube.com/embed/BIE_B7IYIAg", color: ucolor },
+          { title: "Procedural Plastic Wrap Effect in Houdini", subtitle: "Realistic Wrapping for Any Mesh Using Nodes and VEX", description: h_desc_arr[1], url: "https://www.youtube.com/embed/-KPmcNNLlzg", color: ucolor }
+          
         ];
         document.querySelector('.load-videos:nth-child(2)').classList.add('active'); // Highlight Houdini button
       } else if (engine === 'unreal') {
